@@ -1,0 +1,17 @@
+{
+  "name": "cadence-webpack-plugin-tests",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nullstack": "github:nullstack/nullstack#unstable-next"
+  },
+  "scripts": {
+    "start": "npx nullstack start",
+    "build": "npx nullstack build --mode=ssr"
+  },
+  "dependencies": {
+    "@onflow/fcl": "^0.0.78"
+  }
+}
