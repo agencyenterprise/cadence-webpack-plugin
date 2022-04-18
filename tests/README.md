@@ -1,0 +1,32 @@
+# Cadence Webpack Plugin Tests
+
+<img src='https://raw.githubusercontent.com/nullstack/nullstack/master/nullstack.png' height='60' alt='Nullstack' />
+
+## How to run this Project
+
+In the parent folder:
+
+npm install
+npm link
+cd tests
+npm install
+npm link cadence-webpack-plugin
+
+Copy the environment sample to a .env file
+
+```sh
+NULLSTACK_PROJECT_NAME="[dev] Cadence Webpack Plugin Tests"
+NULLSTACK_PROJECT_DOMAIN="localhost"
+NULLSTACK_PROJECT_COLOR="#D22365"
+NULLSTACK_SERVER_PORT="3000"
+```
+
+Run the app in development mode:
+
+`npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Learn more about Nullstack
+
+[Read the documentation](https://nullstack.app/documentation)
