@@ -1,12 +1,19 @@
 import Nullstack from 'nullstack';
 import './Home.scss';
 import Logo from 'nullstack/logo';
+import * as fcl from "@onflow/fcl"
+import QUERY_EXAMPLE from './query-example.cdc'
 
 class Home extends Nullstack {
 
   prepare({ project, page }) {
     page.title = `${project.name} - Welcome to Nullstack!`;
     page.description = `${project.name} was made with Nullstack`;
+  }
+
+  async query() {
+    fcl.config().put("accessNode.api", "https://access-testnet.onflow.org")
+    this.acknowledged = await fcl.query({ cadence: QUERY_EXAMPLE });
   }
 
   renderLink({ children, href }) {
@@ -41,7 +48,7 @@ class Home extends Nullstack {
           <ul>
             <li>
               <Link href="https://nullstack.app/renderable-components">
-                🎉 Create your first component 
+                🎉 Create your first component
               </Link>
             </li>
             <li>
@@ -73,6 +80,9 @@ class Home extends Nullstack {
               "Simplicity is the ultimate sophistication"
             </blockquote>
           </div>
+          <button onclick={this.query} data-acknowledged={this.acknowledged}>
+            Test FCL
+          </button>
         </article>
         <aside>
           <Link href="https://nullstack.app/waifu">

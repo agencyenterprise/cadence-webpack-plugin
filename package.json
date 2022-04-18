@@ -8,5 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mortaro",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-polyfill-webpack-plugin": "^1.1.4"
+  }
 }

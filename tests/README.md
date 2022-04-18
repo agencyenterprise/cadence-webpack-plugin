@@ -4,9 +4,13 @@
 
 ## How to run this Project
 
-Install the dependencies:
+In the parent folder:
 
-`npm install`
+npm install
+npm link
+cd tests
+npm install
+npm link cadence-webpack-plugin
 
 Copy the environment sample to a .env file
 

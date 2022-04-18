@@ -13,6 +13,6 @@
   },
   "dependencies": {
     "@onflow/fcl": "^0.0.78",
-    "cadence-webpack-plugin": "^1.0.0"
+    "cadence-webpack-plugin": "*"
   }
 }
