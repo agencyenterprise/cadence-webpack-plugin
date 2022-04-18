@@ -1,6 +1,6 @@
 {
   "name": "cadence-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack plugin that helps importing .cdc files",
   "homepage": "https://github.com/agencyenterprise/cadence-webpack-plugin",
   "main": "src/index.js",

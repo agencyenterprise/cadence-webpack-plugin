@@ -1,6 +1,8 @@
 # cadence-webpack-plugin
 
-Webpack plugin that helps importing .cdc files
+Webpack plugin that helps importing .cdc files and polyfills fcl dependencies
+
+This fixes the [Buffer is not defined](https://github.com/onflow/fcl-js/issues/1083) and [Module not found: Error: Can't resolve 'http'](https://github.com/onflow/fcl-js/issues/982) bugs
 
 ## Install
 ```sh
