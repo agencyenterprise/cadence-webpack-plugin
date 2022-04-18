@@ -12,6 +12,7 @@
     "build": "npx nullstack build --mode=ssr"
   },
   "dependencies": {
-    "@onflow/fcl": "^0.0.78"
+    "@onflow/fcl": "^0.0.78",
+    "cadence-webpack-plugin": "^1.0.0"
   }
 }

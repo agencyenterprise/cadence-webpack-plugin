@@ -2,17 +2,12 @@ import Nullstack from 'nullstack';
 import './Application.scss';
 import Home from './Home';
 import * as fcl from "@onflow/fcl"
+import QUERY_EXAMPLE from './query-example.cdc'
 
 class Application extends Nullstack {
 
   prepare({ page }) {
     page.locale = 'en-US';
-  }
-
-  hydrate() {
-    fcl.config({
-      "discovery.wallet": "https://fcl-discovery.onflow.org/testnet/authn", // Endpoint set to Testnet
-    })
   }
 
   renderHead() {
@@ -27,9 +22,15 @@ class Application extends Nullstack {
     )
   }
 
+  async query() {
+    fcl.config().put("accessNode.api", "https://access-testnet.onflow.org")
+    const result = await fcl.query({ cadence: QUERY_EXAMPLE });
+    console.log(result);
+  }
+
   render() {
     return (
-      <main onclick={fcl.authenticate}>
+      <main onclick={this.query}>
         <Head />
         <Home route="/" />
       </main>
