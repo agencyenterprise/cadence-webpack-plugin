@@ -1,30 +1,19 @@
 import Nullstack from 'nullstack';
-import './Application.scss';
-import Home from './Home';
+import './Application.css';
+import Cadence from './Cadence';
+import Polyfill from './Polyfill';
 
 class Application extends Nullstack {
 
-  prepare({ page }) {
-    page.locale = 'en-US';
-  }
-
-  renderHead() {
-    return (
-      <head>
-        <link
-          href="https://fonts.gstatic.com" rel="preconnect" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto&display=swap"
-          rel="stylesheet" />
-      </head>
-    )
+  prepare({ project, page }) {
+    page.title = `${project.name} - Welcome to Nullstack!`;
   }
 
   render() {
     return (
       <main>
-        <Head />
-        <Home route="/" />
+        <Cadence route="/" />
+        <Polyfill route="/polyfill" />
       </main>
     )
   }
