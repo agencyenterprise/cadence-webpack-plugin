@@ -6,27 +6,20 @@
 
 In the parent folder:
 
+```sh
 npm install
 npm link
 cd tests
 npm install
 npm link cadence-webpack-plugin
-
-Copy the environment sample to a .env file
-
-```sh
-NULLSTACK_PROJECT_NAME="[dev] Cadence Webpack Plugin Tests"
-NULLSTACK_PROJECT_DOMAIN="localhost"
-NULLSTACK_PROJECT_COLOR="#D22365"
-NULLSTACK_SERVER_PORT="3000"
 ```
 
-Run the app in development mode:
+## How to run the tests
 
-`npm start`
+`cd` to the `tests` folder and run the following:
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```sh
+npm test
+```
 
-## Learn more about Nullstack
-
-[Read the documentation](https://nullstack.app/documentation)
+Then the Jest with Puppeteer combo will run it all and give feedback.

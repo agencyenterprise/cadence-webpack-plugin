@@ -5,11 +5,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nullstack": "^0.15.0"
+    "nullstack": "^0.15.0",
+    "jest": "^26.6.3",
+    "puppeteer": "^5.5.0",
+    "jest-puppeteer": "^6.0.3"
   },
   "scripts": {
     "start": "npx nullstack start",
-    "build": "npx nullstack build --mode=ssr"
+    "build": "npx nullstack build --mode=ssr",
+    "test": "jest"
   },
   "dependencies": {
     "@onflow/fcl": "^0.0.78",
