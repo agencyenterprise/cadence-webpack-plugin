@@ -20,6 +20,40 @@ await mutate({
 });
 ```
 
+
+## Before/After
+
+This plugin helps improve the development experience by allowing the import of Cadence code within a `.cdc` file directly in Javascript, instead of needing to wrap the Cadence code in a Javascript `const` wrapper.
+
+Previously we may have needed to do the following:
+
+```js
+export const GET_FUSD_BALANCE = `
+  import FungibleToken from 0xFungibleToken
+  import FUSD from 0xFUSD
+
+  pub fun main(address: Address): UFix64 {
+  let account = getAccount(address)
+
+  let vaultRef = account
+  .getCapability(/public/fusdBalance)
+  .borrow<&FUSD.Vault{FungibleToken.Balance}>()
+  ?? panic("Could not borrow Balance capability")
+
+  return vaultRef.balance
+  }
+`
+```
+
+Importing directly into JS without wrapping the Cadence code allows us to see the syntax highlighting when modifying the Cadence code because it is in its native `.cdc` format.
+
+Example:
+
+![image info](./public/assets/syntax.png)
+
+
+
+
 ## Setup with Webpack
 
 In your webpack.config.js
