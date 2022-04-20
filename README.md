@@ -20,6 +20,37 @@ await mutate({
 });
 ```
 
+
+## Before/After
+
+Before add the plugin you will have a constant string with the transaction code.
+
+```js
+export const GET_FUSD_BALANCE = `
+  import FungibleToken from 0xFungibleToken
+  import FUSD from 0xFUSD
+
+  pub fun main(address: Address): UFix64 {
+  let account = getAccount(address)
+
+  let vaultRef = account
+  .getCapability(/public/fusdBalance)
+  .borrow<&FUSD.Vault{FungibleToken.Balance}>()
+  ?? panic("Could not borrow Balance capability")
+
+  return vaultRef.balance
+  }
+`
+```
+
+Using the plugin you can import the .cdc file and get insights from the syntax highlights 
+
+![image info](./public/assets/syntax.png)
+
+
+Now you can remote all constants and use the .cdc file into your web system.
+
+
 ## Setup with Webpack
 
 In your webpack.config.js
