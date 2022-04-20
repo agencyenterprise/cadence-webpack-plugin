@@ -52,7 +52,6 @@ Example:
 ![image info](./public/assets/syntax.png)
 
 
-Now you can remote all constants and use the .cdc file into your web system.
 
 
 ## Setup with Webpack
