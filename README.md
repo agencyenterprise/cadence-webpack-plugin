@@ -45,7 +45,9 @@ export const GET_FUSD_BALANCE = `
 `
 ```
 
-Using the plugin you can import the .cdc file and get insights from the syntax highlights 
+Importing directly into JS without wrapping the Cadence code allows us to see the syntax highlighting when modifying the Cadence code because it is in its native `.cdc` format.
+
+Example:
 
 ![image info](./public/assets/syntax.png)
 
