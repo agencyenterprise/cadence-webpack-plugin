@@ -23,7 +23,9 @@ await mutate({
 
 ## Before/After
 
-Before add the plugin you will have a constant string with the transaction code.
+This plugin helps improve the development experience by allowing the import of Cadence code within a `.cdc` file directly in Javascript, instead of needing to wrap the Cadence code in a Javascript `const` wrapper.
+
+Previously we may have needed to do the following:
 
 ```js
 export const GET_FUSD_BALANCE = `
